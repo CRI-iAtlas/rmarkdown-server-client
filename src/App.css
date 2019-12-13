@@ -5,7 +5,7 @@
   width: 100%;
   height: 100px;
   padding: 5px;
-  background-color: #576062;
+  background-color: #212121;
   color: #9D9D9D;
 }
 
@@ -17,7 +17,7 @@
 
 .sidebar {
   flex: 1;
-  background: #001428;
+  background: linear-gradient(#374548,#488A99);
   color: #ffffff;
 }
 
@@ -25,4 +25,16 @@
   flex: 4;
   height: 100%;
   border: none;
+}
+
+.ant-menu-item::after {
+  border-right: 3px solid #DADADA !important;
+}
+
+.ant-menu-item-active {
+  background: #4d4d4d !important;
+}
+
+.ant-menu-item-selected {
+  background: #DBAE58 !important;
 }
