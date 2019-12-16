@@ -8,6 +8,8 @@ const styles = {
     display: 'block',
       height: '30px',
       lineHeight: '30px',
+      color: '#9D9D9D',
+      marginLeft: 0,
   }
 }
 
