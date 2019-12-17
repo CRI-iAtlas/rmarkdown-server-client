@@ -1,0 +1,18 @@
+@import '~antd/dist/antd.css';
+
+.app {
+  height: 100%;
+}
+
+.iframe {
+  height: 100%;
+  border: none;
+}
+
+.ant-menu-item::after {
+  border-right: 3px solid #DADADA !important;
+}
+
+.ant-menu-item-active {
+  background: #4d4d4d !important;
+}

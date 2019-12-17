@@ -1,0 +1,18 @@
+.logo {
+  color: #9d9d9d;
+  font-family: 'Lato', Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  width: 120px;
+  height: 31px;
+  /* background: rgba(255, 255, 255, 0.2); */
+  /* margin: 16px 28px 16px 0; */
+  float: left;
+}
+
+.app-header {
+
+}
+
+.app-header .ant-menu-item-selected {
+  background-color: #ab3e31 !important; /*Overriden property*/
+}
