@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SideBar } from './SideBar'
 import { usePage } from '../Redux/Page'
 import { Layout } from 'antd'
@@ -6,13 +6,13 @@ import './App.css';
 
 import { AppHeader } from './AppHeader'
 
-const { Footer, Sider, Content } = Layout
+const { Sider, Content } = Layout
 
 export const App = () =>
   <Layout style={{ height: "100vh" }}>
     <AppHeader>CRI iAtlas Portal</AppHeader>
     <Layout>
-      <Sider>
+      <Sider width="250px">
         <SideBar />
       </Sider>
       <Content>
