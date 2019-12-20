@@ -4,10 +4,9 @@ import pages from '../pages.json'
 import { array } from 'art-comprehensions'
 import './SideBar.css';
 import { usePage, setPage } from '../Redux/Page'
+import { pageToKey } from './Lib'
 
 const { SubMenu } = Menu;
-
-const pageToKey = ({name, url}) => `${name}-${url}`
 
 const renderMenu = (list) =>
   array(
@@ -19,7 +18,7 @@ const renderMenu = (list) =>
         return <Menu.Item key={pageToKey(page)} onClick={() => setPage(page)}>{presentation}</Menu.Item>
       } else {
         return <SubMenu
-          key="sub1"
+          key={name}
           title={presentation}
         >
           {renderMenu(items)}
@@ -27,11 +26,6 @@ const renderMenu = (list) =>
       }
     }
   )
-
-const log = (a) => {
-  console.log(a)
-  return a
-}
 
 export const SideBar = ({ showPage }) =>
   <div className="sidebar">

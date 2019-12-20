@@ -1,31 +1,16 @@
 [
   {
-    "name": "iAtlas Exporer Home",
+    "name": "Examples",
     "icon": "dashboard",
-    "url": "page1.html"
-  },
-  {
-    "name": "Lung Cancer",
-    "icon": "bar-chart",
     "items": [
       {
-        "name": "Lung Cancer By Sex",
-        "icon": "dashboard",
-        "url": "http://localhost:5001/lung.Rmd?variable=sex"
+        "name": "Fiji earthquakes",
+        "icon": "setting",
+        "url": "http://localhost:5001/fiji_earthquakes.Rmd"
       },
       {
-        "name": "Lung Cancer By ph.karno",
-        "icon": "dashboard",
-        "url": "http://localhost:5001/lung.Rmd?variable=ph.karno"
-      },
-      {
-        "name": "Lung Cancer By pat.karno",
-        "icon": "dashboard",
-        "url": "http://localhost:5001/lung.Rmd?variable=pat.karno"
-      },
-      {
-        "name": "Lung Cancer w Controls",
-        "icon": "dashboard",
+        "name": "Lung Cancer",
+        "icon": "setting",
         "url": "http://localhost:5001/lung.Rmd?variable=sex",
         "params": {
           "variable": {
@@ -43,54 +28,65 @@
     ]
   },
   {
-    "name": "Analysis Modules",
-    "icon": "bar-chart",
+    "name": "iAtlas Example",
+    "icon": "dashboard",
     "items": [
       {
-        "name": "Sample Group Overview",
-        "icon": "setting",
-        "url": "http://localhost:5001/?region=Sample-Group-Overview"
+        "name": "iAtlas Exporer Home",
+        "icon": "dashboard",
+        "url": "page1.html"
       },
       {
-        "name": "Tumor Microenvironment",
-        "icon": "setting",
-        "url": "http://localhost:5001/?region=Tumor-Microenvironment"
+        "name": "Analysis Modules",
+        "icon": "bar-chart",
+        "items": [
+          {
+            "name": "Sample Group Overview",
+            "icon": "setting",
+            "url": "http://localhost:5001/?region=Sample-Group-Overview"
+          },
+          {
+            "name": "Tumor Microenvironment",
+            "icon": "setting",
+            "url": "http://localhost:5001/?region=Tumor-Microenvironment"
+          },
+          {
+            "name": "Immune Feature Trends",
+            "icon": "setting",
+            "url": "http://localhost:5001/?region=Immune-Feature-Trends"
+          },
+          {
+            "name": "Clinical Outcomes",
+            "icon": "setting",
+            "url": "http://localhost:5001/?region=Clinical-Outcomes"
+          },
+          {
+            "name": "Immunomodulators",
+            "icon": "setting",
+            "url": "http://localhost:5001/?region=Immunomodulators"
+          },
+          {
+            "name": "IO Targets",
+            "icon": "setting",
+            "url": "http://localhost:5001/?region=IO-Targets"
+          },
+          {
+            "name": "TIL Maps",
+            "icon": "setting",
+            "url": "http://localhost:5001/?region=TIL-Maps"
+          },
+          {
+            "name": "Driver Associations",
+            "icon": "setting",
+            "url": "http://localhost:5001/?region=Driver-Associations"
+          }
+        ]
       },
       {
-        "name": "Immune Feature Trends",
-        "icon": "setting",
-        "url": "http://localhost:5001/?region=Immune-Feature-Trends"
-      },
-      {
-        "name": "Clinical Outcomes",
-        "icon": "setting",
-        "url": "http://localhost:5001/?region=Clinical-Outcomes"
-      },
-      {
-        "name": "Immunomodulators",
-        "icon": "setting",
-        "url": "http://localhost:5001/?region=Immunomodulators"
-      },
-      {
-        "name": "IO Targets",
-        "icon": "setting",
-        "url": "http://localhost:5001/?region=IO-Targets"
-      },
-      {
-        "name": "TIL Maps",
-        "icon": "setting",
-        "url": "http://localhost:5001/?region=TIL-Maps"
-      },
-      {
-        "name": "Driver Associations",
-        "icon": "setting",
-        "url": "http://localhost:5001/?region=Driver-Associations"
+        "name": "Data Description",
+        "icon": "unordered-list",
+        "url": "page3.html"
       }
     ]
-  },
-  {
-    "name": "Data Description",
-    "icon": "unordered-list",
-    "url": "page3.html"
   }
 ]
