@@ -5,6 +5,44 @@
     "url": "page1.html"
   },
   {
+    "name": "Lung Cancer",
+    "icon": "bar-chart",
+    "items": [
+      {
+        "name": "Lung Cancer By Sex",
+        "icon": "dashboard",
+        "url": "http://localhost:5001/lung.Rmd?variable=sex"
+      },
+      {
+        "name": "Lung Cancer By ph.karno",
+        "icon": "dashboard",
+        "url": "http://localhost:5001/lung.Rmd?variable=ph.karno"
+      },
+      {
+        "name": "Lung Cancer By pat.karno",
+        "icon": "dashboard",
+        "url": "http://localhost:5001/lung.Rmd?variable=pat.karno"
+      },
+      {
+        "name": "Lung Cancer w Controls",
+        "icon": "dashboard",
+        "url": "http://localhost:5001/lung.Rmd?variable=sex",
+        "params": {
+          "variable": {
+            "label": "Variable",
+            "value": "sex",
+            "input": "select",
+            "choices": [
+              "sex",
+              "ph.karno",
+              "pat.karno"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
     "name": "Analysis Modules",
     "icon": "bar-chart",
     "items": [
@@ -52,7 +90,7 @@
   },
   {
     "name": "Data Description",
-    "icon":"unordered-list",
+    "icon": "unordered-list",
     "url": "page3.html"
   }
 ]

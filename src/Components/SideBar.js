@@ -7,13 +7,16 @@ import { usePage, setPage } from '../Redux/Page'
 
 const { SubMenu } = Menu;
 
+const pageToKey = ({name, url}) => `${name}-${url}`
+
 const renderMenu = (list) =>
   array(
     list,
-    ({ url, icon, name, items }) => {
+    (page) => {
+      const { url, icon, name, items } = page
       const presentation = <span>{icon ? <Icon type={icon} /> : null}{name}</span>
       if (url) {
-        return <Menu.Item key={url} onClick={() => setPage(url)}>{presentation}</Menu.Item>
+        return <Menu.Item key={pageToKey(page)} onClick={() => setPage(page)}>{presentation}</Menu.Item>
       } else {
         return <SubMenu
           key="sub1"
@@ -34,7 +37,7 @@ export const SideBar = ({ showPage }) =>
   <div className="sidebar">
     <Menu
       mode="inline"
-      selectedKeys={log([usePage()])}
+      selectedKeys={[pageToKey(usePage())]}
       defaultOpenKeys={['sub1']}
       style={{ height: '100%' }}
     >
