@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layout, Select } from 'antd'
+import { Layout, Select, Form } from 'antd'
 import { array, object } from 'art-comprehensions'
 
 const Url = require('url-parse')
@@ -11,10 +11,21 @@ export const Page = ({ page: { params, url } }) => {
   const parsedUrl = new Url(url, null, true)
   parsedUrl.set("query", { ...parsedUrl.query, ...values })
 
+  const formItemLayout = {
+    labelCol: {
+      xs: { span: 8 },
+      sm: { span: 4 },
+    },
+    wrapperCol: {
+      xs: { span: 24 },
+      sm: { span: 16 },
+    },
+  }
+
   return <Content>
-    <div>{array(params, ({ label, value, input, choices }, key) => {
+    <Form {...formItemLayout}>{array(params, ({ label, value, input, choices }, key) => {
       if (input == "select") {
-        return <Select
+        return <Form.Item label={label}><Select
           onChange={(v) => setValues(object(params, ({ value }, k) => k === key ? v : value))}
           key={key}
           defaultValue={values[key]}
@@ -23,9 +34,9 @@ export const Page = ({ page: { params, url } }) => {
           {array(choices, (choice) =>
             <Option key={`${key}-${choice}`} value={choice}>{choice}</Option>
           )}
-        </Select>
+        </Select></Form.Item>
       }
-    })}</div>
+    })}</Form>
     {url
       ? <iframe id="page-loader" title="webpage" name="page-loader" className="iframe" src={parsedUrl.toString()} />
       : null

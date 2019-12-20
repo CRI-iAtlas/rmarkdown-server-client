@@ -24,7 +24,30 @@
             ]
           }
         }
+      },
+      {
+        "name": "networkD3 Demo",
+        "icon": "radar-chart",
+        "url": "http://localhost:5001/network.Rmd"
+      },
+      {
+        "name": "leaflet Demo",
+        "icon": "global",
+        "url": "http://localhost:5001/leaflet.Rmd",
+        "params": {
+          "tiles": {
+            "label": "Tiles",
+            "value": "normal",
+            "input": "select",
+            "choices": [
+              "normal",
+              "monochrome"
+            ]
+          }
+        }
       }
+
+
     ]
   },
   {
