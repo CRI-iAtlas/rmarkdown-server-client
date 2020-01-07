@@ -6,10 +6,13 @@ const Url = require('url-parse')
 const { Content } = Layout
 const { Option } = Select
 
-export const Page = ({ page: { params, url } }) => {
-  const [values, setValues] = useState(object(params, ({ value }) => value))
+const deArray = (a) => Array.isArray(a) ? a[0] : a
+
+export const Page = ({ page: { url }, params }) => {
+  const [values, setValues] = useState(object(params, ({ value }) => deArray(value)))
   const parsedUrl = new Url(url, null, true)
   parsedUrl.set("query", { ...parsedUrl.query, ...values })
+  console.log({render:{params, values}})
 
   const formItemLayout = {
     labelCol: {
@@ -24,8 +27,11 @@ export const Page = ({ page: { params, url } }) => {
 
   return <Content>
     <Form {...formItemLayout}>{array(params, ({ label, value, input, choices }, key) => {
-      if (input == "select") {
-        return <Form.Item label={label}><Select
+      input = deArray(input)
+      label = deArray(label)
+      value = deArray(value)
+      if (input === "select") {
+        return <Form.Item key={label} label={label}><Select
           onChange={(v) => setValues(object(params, ({ value }, k) => k === key ? v : value))}
           key={key}
           defaultValue={values[key]}

@@ -22,35 +22,12 @@
       {
         "name": "Lung Cancer",
         "icon": "setting",
-        "url": "http://localhost:5001/lung.Rmd?variable=sex",
-        "params": {
-          "variable": {
-            "label": "Variable",
-            "value": "sex",
-            "input": "select",
-            "choices": [
-              "sex",
-              "ph.karno",
-              "pat.karno"
-            ]
-          }
-        }
+        "url": "http://localhost:5001/lung.Rmd?variable=sex"
       },
       {
         "name": "leaflet Demo",
         "icon": "global",
-        "url": "http://localhost:5001/leaflet.Rmd",
-        "params": {
-          "tiles": {
-            "label": "Tiles",
-            "value": "normal",
-            "input": "select",
-            "choices": [
-              "normal",
-              "monochrome"
-            ]
-          }
-        }
+        "url": "http://localhost:5001/leaflet.Rmd"
       }
     ]
   }

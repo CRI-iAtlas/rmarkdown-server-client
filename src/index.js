@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {App} from './Components/App';
 import * as serviceWorker from './serviceWorker';
-import {Provider} from 'hooks-for-redux'
+import {Provider, getStore} from 'hooks-for-redux'
+
+global.store = getStore()
 
 ReactDOM.render(<Provider><App /></Provider>, document.getElementById('root'));
 

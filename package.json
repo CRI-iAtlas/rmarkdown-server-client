@@ -9,10 +9,13 @@
     "antd": "^3.26.2",
     "art-comprehensions": "^3.0.0",
     "hooks-for-redux": "^1.2.2",
+    "install": "^0.13.0",
+    "npm": "^6.13.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
-    "url-parse": "^1.4.7"
+    "url-parse": "^1.4.7",
+    "xhr-request": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
