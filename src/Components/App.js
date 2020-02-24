@@ -12,7 +12,7 @@ export const App = () => {
   const page = usePage()
   const params = usePageParams()
   return <Layout style={{ height: "100vh" }}>
-    <AppHeader>CRI iAtlas Portal</AppHeader>
+    <AppHeader>RMarkdown Server Demo</AppHeader>
     <Layout>
       <Layout.Sider width="250px">
         <SideBar />
